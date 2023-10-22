@@ -2,13 +2,22 @@ package one.digitalinnovation.gof.strategy;
 
 public class Robo {
 	
-	private Comportamento comportamento;
+	private Movimento movimento;
+	private Golpe golpe;
 
-	public void setComportamento(Comportamento comportamento) {
-		this.comportamento = comportamento;
+	public void setMovimento(Movimento movimento) {
+		this.movimento = movimento;
 	}
 	
+	public void setGolpe(Golpe golpe) {
+		this.golpe = golpe;
+	}
+
 	public void mover() {
-		comportamento.mover();
+		movimento.mover();
+	}
+
+	public void golpe() {
+		golpe.golpe();
 	}
 }
